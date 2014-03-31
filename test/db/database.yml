@@ -7,17 +7,18 @@ sqlite3mem:
 postgresql:
   adapter: postgresql
   encoding: unicode
-  database: activerecord_any_of_plugin_test
+  database: activerecord_any_of_test
   pool: 5
   username: postgres
-  password: postgres
+  password:
   min_messages: warning
 mysql:
   adapter: <%= defined?(JRUBY_VERSION) ? "jdbcmysql" : "mysql2" %>
   host: localhost
   username: root
   password:
-  database: activerecord_any_of_plugin_test
+  database: activerecord_any_of_test
+  encoding: utf8
 ## Add DB Configuration to run Oracle tests
 oracle:
   adapter: oracle_enhanced
