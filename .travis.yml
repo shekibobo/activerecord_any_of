@@ -25,3 +25,4 @@ matrix:
   allow_failures:
     - gemfile: gemfiles/rails_edge.gemfile
     - env: DB=postgresql
+    - env: DB=mysql
