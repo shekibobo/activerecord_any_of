@@ -5,7 +5,7 @@ require 'bundler/setup'
 require 'pry'
 
 require 'logger'
-require 'rails'
+require 'rails/all'
 require 'active_record'
 ActiveRecord::Base.logger = Logger.new(plugin_test_dir + "/debug.log")
 
