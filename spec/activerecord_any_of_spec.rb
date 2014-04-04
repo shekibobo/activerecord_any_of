@@ -138,7 +138,9 @@ describe ActiverecordAnyOf do
 
   if Rails.version >= '4'
     it 'calling directly #any_of is deprecated in rails-4' do
+      allow(ActiveSupport::Deprecation).to receive(:warn)
       Author.any_of({name: 'David'}, {name: 'Mary'})
+      expect(ActiveSupport::Deprecation).to have_received(:warn)
     end
   end
 end
