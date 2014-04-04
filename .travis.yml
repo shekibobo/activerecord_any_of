@@ -1,6 +1,6 @@
 language: ruby
 script:
-  - bundle exec rake test
+  - bundle exec rake spec
 before_script:
   - mysql -e 'create database activerecord_any_of_test;'
   - psql -c 'create database activerecord_any_of_test;' -U postgres
